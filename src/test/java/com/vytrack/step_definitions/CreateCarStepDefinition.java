@@ -53,10 +53,14 @@ public class CreateCarStepDefinition {
         //for(Map.Entry<String, String> entry:dataTable.entrySet()){
         //    System.out.println("Key: "+entry.getKey()+", value: "+entry.getValue() );
         //}
-        System.out.println("License plate: "+dataTable.get("License Plate"));
-        System.out.println("Model Year: "+ dataTable.get("Model Year"));
 
-        createCarPage.enterLicensePlate(dataTable.get("License Plate"));
-        createCarPage.enterModelYear(dataTable.get("Model Year"));
+        String licensePlate = dataTable.get("License Plate");
+        String modelYear = dataTable.get("Model Year");
+
+        System.out.println("License plate: "+dataTable.get(licensePlate));
+        System.out.println("Model Year: "+ dataTable.get(modelYear));
+
+        createCarPage.enterLicensePlate(dataTable.get(licensePlate));
+        createCarPage.enterModelYear(dataTable.get(modelYear));
     }
 }

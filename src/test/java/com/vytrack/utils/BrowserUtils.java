@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BrowserUtils {
     private static WebDriverWait wait = new WebDriverWait(Driver.getDriver(),20);
 
-    public void wait(int seconds){
+    public static void wait(int seconds){
         try {
             Thread.sleep(1000);
         }catch(InterruptedException e){

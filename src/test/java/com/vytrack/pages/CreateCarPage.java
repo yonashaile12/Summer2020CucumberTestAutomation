@@ -28,6 +28,9 @@ public class CreateCarPage extends BasePage{
         BrowserUtils.enterText(licensePlateInputBox, licensePlate);
     }
 
+    public void enterModelYear(String modelYear){
+        BrowserUtils.enterText(modelYearInputBox, modelYear);
+    }
 
     /**
      * sometimes, for very longs string webdriver might enter text not fully.

@@ -28,9 +28,15 @@ public class BasePage {
      */
     public void navigateTo(String tab, String module){
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
-        String tabXpath = "//*[contains(text(),'" +tab+ "' ) and @class='title title-level-1']";
-        String moduleXpath = "//*[contains(text(),'"+module+"') and @class='title title-level-2]";
+        String tabXpath = "//*[contains(text(),'" + tab + "') and @class='title title-level-1']";
+        String moduleXpath = "//*[contains(text(),'"+module+"') and @class='title title-level-2']";
+
+        //wait for presence and ability co click on element
         WebElement tabElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(tabXpath)));
         wait.until(ExpectedConditions.elementToBeClickable(tabElement)).click();
+
+        WebElement moduleElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(moduleXpath)));
+        wait.until(ExpectedConditions.elementToBeClickable(moduleElement)).click();
     }
+
 }
